@@ -2,7 +2,6 @@ from django.db import models
 from django.conf import settings
 
 
-
 class Item(models.Model):
     name = models.CharField(max_length=100)
     desc = models.TextField(blank=True)
@@ -10,8 +9,9 @@ class Item(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_publish = models.BooleanField(default=False)
+    
     def __str__(self):
-        return f'이름: {self.name}'
+        return f'pk: {self.pk}, 이름: {self.name}'
 
 
 class Profile(models.Model):
