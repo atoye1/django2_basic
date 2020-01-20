@@ -1,0 +1,7 @@
+view 호출시 인자
+httprequest 객체
+
+view호출에 대한 리턴
+1. 필히 HttpResponse 객체여야한다
+    django.shortcuts.render 함수는 템플릿 응답을 위한 shortcut 함수 !!!Templates!!!
+2. 파일 like객체 혹은 str/bytes타입의 응답 지원
