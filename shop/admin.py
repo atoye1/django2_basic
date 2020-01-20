@@ -9,6 +9,8 @@ from .models import Item
 class ItemAdmin(admin.ModelAdmin):
     list_display = ['pk', 'name', 'price', 'short_desc', 'is_publish']
     list_display_links = ['name']
-    search_fields= ['name']
+    search_fields = ['name', 'desc']
+    list_filter = ['is_publish', 'updated_at']
+
     def short_desc(self, item):
         return item.desc[:20]

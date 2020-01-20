@@ -1,0 +1,16 @@
+<form action ="" method="GET">
+    <input type="text" name="q" value="{{ q }}">
+    <input type="submit" value="검색" >
+</form>
+
+
+
+{% for item in item_list %}
+<div>
+<h3> {{ item.name }}</h3>
+<h4> 가격: {{ item.price }} </h4>
+{% if item.desc %}
+<p> {{ item.desc }}</p>
+{% endif %}
+</div>
+{% endfor %}
