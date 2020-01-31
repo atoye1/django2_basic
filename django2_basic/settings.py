@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'shop',
-    'blog',
+    'bgglog',
     'debug_toolbar',
 ]
 
